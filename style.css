@@ -158,6 +158,8 @@ body {
     padding: 0 30px;
     margin-top: 110px;
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .main-container h1 {
@@ -270,4 +272,39 @@ body {
 
 .reviews-container .review.show .expand {
     display: none;
+}
+
+.main-container .page {
+    font-size: 1.4rem;
+    margin: 20px 0 40px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    align-self: center;
+}
+
+.main-container .page button {
+    padding: 5px 8px;
+    margin: 0 15px;
+    border: 1px solid var(--dark);
+    border-radius: 6px;
+    cursor: pointer;
+    color: var(--dark);
+}
+
+.main-container .page button:focus {
+    outline: none;
+}
+
+.main-container .page button:hover {
+    background-color: var(--green);
+}
+
+.main-container .page button:active {
+    transform: scale(0.98);
+}
+
+.main-container .page button .fa {
+    font-weight: bold;
+    font-size: 1.1rem;
 }
