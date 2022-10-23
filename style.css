@@ -23,3 +23,133 @@ body {
     align-items: center;
     height: 100vh;
 }
+
+#header {
+    width: 100%;
+    background-color: var(--white);
+}
+
+#header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 25px;
+    position: relative;
+    height: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#header .logo {
+    font-weight: bold;
+    font-size: 1.3rem;
+}
+
+#header .header-items .btn {
+    cursor: pointer;
+    font-size: 1.2rem;
+    background-color: var(--green);
+    border: none;
+    border-radius: 50%;
+    padding: 8px 10px;
+}
+
+#header .header-items .btn:focus {
+    outline: none;
+}
+
+#header .header-items .btn:active {
+    transform: scale(0.98);
+}
+
+#header .header-items .nav-bars-btn {
+    display: none;
+}
+
+#header.guest .header-items .nav-bars-btn {
+    display: initial;
+}
+
+#header.guest .header-items .sign-up-btn {
+    display: none;
+}
+
+#header #nav {
+    position: fixed;
+    background-color: var(--dark);
+    color: var(--white);
+    width: 100%;
+    left: 0;
+    top: -500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 100px;
+    z-index: 100;
+}
+
+#header #nav.show {
+    top: 0;
+    animation: nav-expand .3s;
+}
+
+#header #nav.collapse {
+    animation: nav-collapse .3s;
+}
+
+@keyframes nav-expand {
+    0% {
+        top: -500px;
+    }
+    100% {
+        top: 0;
+    }
+}
+
+@keyframes nav-collapse {
+    0% {
+        top: 0;
+    }
+    100% {
+        top: -500px;
+    }
+}
+
+#header.guest #nav .initial {
+    display: none;
+}
+
+#header #nav .guest {
+    display: none;
+}
+
+#header.guest #nav .guest {
+    display: initial;
+}
+
+#header #nav ul {
+    width: 100%;
+}
+
+#header #nav ul li button {
+    width: 100%;
+    border: none;
+    background-color: var(--dark);
+    color: var(--white);
+    padding: 25px 0;
+    cursor: pointer;
+}
+
+#header #nav ul li button:focus {
+    outline: none;
+}
+
+#header #nav ul li button:hover {
+    background-color: var(--light);
+}
+
+.main-container {
+    flex: 1;
+}
+

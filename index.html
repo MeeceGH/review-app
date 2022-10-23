@@ -10,23 +10,25 @@
     <title>Review App</title>
 </head>
 <body>
-    <header id="header">
-        <div class="logo">
-            ReviewApp
+    <header id="header" class="guest">
+        <div class="container">
+            <div class="logo">
+                ReviewApp
+            </div>
+            <div class="header-items">
+                <button class="btn sign-up-btn"><i class="fa fa-sign-in"></i></button>
+                <button class="btn nav-bars-btn"><i class="fa fa-bars"></i></button>
+            </div>
+            <nav id="nav">
+                <ul class="initial">
+                    <li><button class="btn">New Guest</button></li>
+                </ul>
+                <ul class="guest">
+                    <li><button class="btn">New Review</button></li>
+                    <li><button class="btn">Sign Out</button></li>
+                </ul>
+            </nav>
         </div>
-        <div class="header-items">
-            <i class="fa fa-sign-in"></i>
-            <i class="fa fa-bars"></i>
-        </div>
-        <nav id="nav">
-            <ul class="initial">
-                <li>New Guest</li>
-            </ul>
-            <ul class="guest">
-                <li>New Review</li>
-                <li>Sign Out</li>
-            </ul>
-        </nav>
     </header>
 
     <div class="main-container">
