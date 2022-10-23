@@ -26,7 +26,10 @@ body {
 
 #header {
     width: 100%;
+    position: fixed;
     background-color: var(--white);
+    border-bottom: 1px solid var(--dark);
+    z-index: 99;
 }
 
 #header .container {
@@ -151,5 +154,120 @@ body {
 
 .main-container {
     flex: 1;
+    max-width: 600px;
+    padding: 0 30px;
+    margin-top: 110px;
+    width: 100%;
 }
 
+.main-container h1 {
+    font-weight: bold;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.reviews-container .review {
+    position: relative;
+    background-color: var(--white);
+    border: 1px solid var(--dark);
+    border-radius: 5px;
+    margin: 10px 0;
+    padding: 15px 25px;
+    width: 100%;
+}
+
+.reviews-container .review .title {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-decoration: underline;
+}
+
+.reviews-container .review .about {
+    display: none;
+}
+
+.reviews-container .review.show .about {
+    display: flex;
+}
+
+.reviews-container .buttons-container {
+    margin: 10px 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.reviews-container .buttons-container .fa-solid {
+    font-size: 1.2rem;
+}
+
+.reviews-container .buttons-container button {
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+.reviews-container .buttons-container .upvote {
+    color: var(--medium);
+    border: 1px solid var(--medium);
+}
+
+.reviews-container .buttons-container .downvote {
+    color: var(--red);
+    border: 1px solid var(--red);
+}
+
+.reviews-container .buttons-container .upvote:focus,
+.reviews-container .buttons-container .downvote:focus {
+    outline: none;   
+}
+
+.reviews-container .buttons-container .upvote:hover,
+.reviews-container .buttons-container .downvote:hover {
+    opacity: 0.7;
+}
+
+.reviews-container .buttons-container button small {
+    margin-left: 6px;
+    padding-top: 1px;
+}
+
+.reviews-container .review .category {
+    font-size: 0.7rem;
+}
+
+.reviews-container .review .expansion-buttons {
+    height: 20px;
+}
+
+.reviews-container .review .expand button,
+.reviews-container .review .collapse button {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    border: none;
+    border-radius: 0 0 5px 5px;
+    font-size: 1.2rem;
+    background-color: #ddd;
+    cursor: pointer;
+}
+
+.reviews-container .review .expand button:focus,
+.reviews-container .review .collapse button:focus {
+    outline: none;
+}
+
+.reviews-container .review .collapse {
+    display: none;
+}
+
+.reviews-container .review.show .collapse {
+    display: initial;
+}
+
+.reviews-container .review.show .expand {
+    display: none;
+}
