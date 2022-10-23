@@ -308,3 +308,25 @@ body {
     font-weight: bold;
     font-size: 1.1rem;
 }
+
+#footer {
+    background-color: var(--black);
+    color: var(--white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 0.8rem;
+    width: 100%;
+    padding: 50px 0;
+}
+
+#footer a {
+    color: var(--red);
+    text-decoration: underline;
+    cursor: pointer;
+    z-index: 40;
+}
+
+#footer a:hover {
+    opacity: 0.8;
+}
