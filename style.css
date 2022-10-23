@@ -95,7 +95,7 @@ body {
 }
 
 #header #nav.collapse {
-    animation: nav-collapse .3s;
+    animation: nav-collapse .5s;
 }
 
 @keyframes nav-expand {
@@ -146,7 +146,7 @@ body {
 }
 
 #header #nav ul li button:hover {
-    background-color: var(--light);
+    background-color: var(--medium);
 }
 
 .main-container {
